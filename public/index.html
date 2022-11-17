@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="./styles.css"/>
+    </head>
+    
+    <body>
+        
+        <div>
+            <h1>Write a Name and Password</h1>
+            <p>This will create a small alert</p>
+        </div>
+
+        <form onsubmit="fs()">
+            <input id="name" type="text" placeholder="Name"/>
+            <input id="password" type="password" placeholder="Password"/>
+            <button onClick="submit" type="submit">Create Alert!</button>
+        </form>
+
+        <script>
+            function fs(){
+                event.preventDefault()
+                const name = document.getElementById("name").value
+                const password = document.getElementById("password").value
+
+                console.log("user name: "+name+" password: "+password)
+
+                alert("The Form has been submitted")
+            }
+        </script>
+        
+    </body>
+
+</html>
